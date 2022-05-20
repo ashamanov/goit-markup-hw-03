@@ -3,7 +3,18 @@
     --secondary-font-family: 'Raleway', sans-serif;
     --accent-color: #188CE8;    
 }
-
+h1,h2,h3,h4,h5,h6,p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+img {
+    display: block;
+}
 .link {
     text-decoration: none;
 }
@@ -14,6 +25,42 @@ body {
     font-family: var(--primary-font-family);
     color: #212121;
 }
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* =========================HEADER========================= */
+.page-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+}
+.menu {
+    display: flex;
+}
+.menu-item:not(:last-child) {
+    margin-right: 50px;
+}
+.header-mailphone {
+    display: flex;
+    margin-left: auto;
+}
+.header-mailphone-item {
+    margin-right: 40px;
+}
 .logo-link-blue {
     font-family: var(--secondary-font-family);
     font-weight: 700;
@@ -21,6 +68,7 @@ body {
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: #2196F3;
+    margin-right: 93px;
 }
 .logo-link-white {
     color: #FFFFFF;
@@ -34,6 +82,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: inherit;
+    margin-left: auto;
 }
 .menu-link:hover,
 .menu-link:focus {
@@ -45,15 +94,25 @@ body {
 .mailtel {
     color: #757575;
 }
+/* =========================MAIN (HERO)========================= */
 .hero {
     background: #2F303A;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
 }
 .headline {
+    width: 696px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;  
     text-transform: uppercase;
     color: #FFFFFF;
+    background: #2F303A;
+    letter-spacing: 0.06em;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .modal-btn {
     font-weight: 700;
@@ -63,14 +122,24 @@ body {
     color: #FFFFFF;
     background: #2196F3;
     cursor: pointer;
+    border-radius: 4px;
+    padding: 10px 32px;
 }
 .modal-btn:hover,
 .modal-btn:focus {
     background: var(--accent-color);
 }
-.projects-item-link {
-    font-style: normal;
-    color: inherit;
+/* =========================MAIN (ABOUT US)========================= */
+.aboutus {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.aboutus-list {
+    display: flex;
+    align-items: center;
+}
+.aboutus-list-item {
+    width: 270px;
 }
 .aboutus-titles {
     font-weight: 700;
@@ -78,6 +147,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 .aboutus-suptitles {
     font-weight: 400;
@@ -86,20 +156,46 @@ body {
     letter-spacing: 0.03em;
     color: #757575;
 }
+/* =========================MAIN (WHAT WE DO)========================= */
+.whatwedo {
+    padding-bottom: 94px;
+    text-align: center;
+}
+.whatwedo-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .h2titles {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
     letter-spacing: 0.03em;
+    margin-bottom: 50px;
 }
+/* =========================MAIN (OUR TEAM)========================= */
 .ourteam {
     background: #F5F4FA;
+    text-align: center;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.ourteam-list {
+    display: flex;
+    justify-content: space-between;
+}
+.ourteam-item {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 .ourteam-names {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
     letter-spacing: 0.03em;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 .ourteam-jobposition {
     font-weight: 400;
@@ -107,9 +203,16 @@ body {
     line-height: 1.18;
     letter-spacing: 0.03em;
     color: #757575;
+    margin-bottom: 30px;
 }
+/* =========================FOOTER========================= */
 .footer {
     background: #2F303A;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.address {
+    padding-top: 20px;
 }
 .adress-list-link {
     font-style: normal;
@@ -121,6 +224,22 @@ body {
 }
 .geo {
     color: #FFFFFF;
+    margin-bottom: 9px;
+}
+.adress-list-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+/* =========================PORTFOLIO========================= */
+.main-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.section-list {
+    display: flex;
+    justify-content: center;
+}
+.section-list-item:not(:last-child) {
+    margin-right: 8px;
 }
 .modal-btns {
     font-weight: 500;
@@ -129,17 +248,33 @@ body {
     letter-spacing: 0.03em;
     cursor: pointer;
     background: #F5F4FA;
+    border-radius: 4px;
+    margin-bottom: 50px;
 }
 .modal-btns:hover,
 .modal-btns:focus {
     background: #2196F3;
     color: #FFFFFF;
 }
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -30px;
+}
+.projects-item {
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    margin-bottom: 30px;
+}
 .projects-name {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    padding-top: 20px ;
+    padding-left: 24px;
+    margin-bottom: 4px;
 }
 .projects-discription {
     font-weight: 400;
@@ -147,4 +282,10 @@ body {
     line-height: 1.875;
     letter-spacing: 0.03em;
     color: #757575;
+    padding-left: 24px;
+    padding-bottom: 24px;
+}
+.projects-item-link {
+    font-style: normal;
+    color: inherit;
 }
